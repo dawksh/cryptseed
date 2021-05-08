@@ -1,9 +1,19 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+
+import { useLocalStorage } from '../utils/useLocalStorage';
+
 
 function decrypt() {
     const [uid, setUid] = useState(undefined)
-    const [locArr, setLocArr] = useState(undefined)
+    const [locArr, setLocArr] = useState()
 
+    useEffect(() => {
+        setTimeout(() => {
+            const data = localStorage.getItem("saved")
+            setLocArr(JSON.parse(data))
+            console.log(locArr)
+        }, 1000);
+    }, [])
 
     if (uid) {
         return (
@@ -12,9 +22,7 @@ function decrypt() {
             </>
         )
     } else {
-        const tempArr = window.localStorage.getItem('saved')
-        setLocArr(JSON.parse(tempArr))
-        console.log(locArr)
+
         return (
             <div>
                 this is decryption page
