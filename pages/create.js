@@ -1,6 +1,6 @@
 import { useState } from "react";
 const crypto = require('crypto-js');
-
+import { useUID } from '../utils/useUID';
 
 function create() {
 
@@ -10,16 +10,16 @@ function create() {
     const savePhrase = (e) => {
         const encPhrase = crypto.AES.encrypt(phrase, process.env.NEXT_PUBLIC_SECRET_PHRASE).toString();
         const encService = crypto.AES.encrypt(service, process.env.NEXT_PUBLIC_SECRET_PHRASE).toString();
-        const uid = sessionStorage.getItem('uid');
-        const saveObj = {
-            uid: uid,
+        const uid = crypto.AES.encrypt(useUID(), process.env.NEXT_PUBLIC_SECRET_PHRASE).toString();
+        let saveObj = {
             phrase: encPhrase,
             service: encService
-        }
+        };
         const localArr = localStorage.getItem('saved');
         var savedArr
         if (!localArr) {
-            savedArr = []
+            savedArr = [uid]
+
         } else {
             savedArr = JSON.parse(localArr);
         }
@@ -27,6 +27,7 @@ function create() {
         savedArr.push(saveObj);
         const tempArr = JSON.stringify(savedArr);
         console.log(savedArr, tempArr)
+        localStorage.removeItem('saved')
         localStorage.setItem('saved', tempArr);
         setPhrase('');
         setService('');
