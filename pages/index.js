@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import {
     Box,
     Heading,
@@ -11,6 +12,7 @@ import {
     Icon,
     useColorModeValue,
     createIcon,
+    Feature
 } from '@chakra-ui/react';
 
 export default function CallToActionWithAnnotation() {
@@ -33,16 +35,16 @@ export default function CallToActionWithAnnotation() {
                     spacing={{ base: 8, md: 14 }}
                     py={{ base: 20, md: 36 }}>
                     <Heading
-                        fontWeight={600}
-                        fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+                        fontWeight={'extrabold'}
+                        fontSize={{ base: '5xl', md: '6xl' }}
                         lineHeight={'110%'}>
                         Save your seed phrases <br />
                         <Text as={'span'} color={'green.400'}>
                             securely
             </Text>
                     </Heading>
-                    <Text color={'gray.500'}>
-                        Tired of saving your seed phrases on your drive and paranoid of them getting caught by crackers? Try Cryptseed. Encrypt your seed phrases and save them inside your browser. Still skeptical of this? Clone this project repo and host it yourself.
+                    <Text color={'gray.600'} fontSize={{ base: 'xl', md: 'md' }}>
+                        Tired of saving your seed phrases? Try Cryptseed ✨. Encrypt seed phrases with AES encryption and save them inside your browser. Signup now to register and get email when the product goes live!
           </Text>
                     <Stack
                         direction={'column'}
@@ -54,11 +56,12 @@ export default function CallToActionWithAnnotation() {
                             colorScheme={'green'}
                             bg={'green.400'}
                             rounded={'full'}
-                            px={6}
+                            px={7}
+                            py={6}
                             _hover={{
                                 bg: 'green.500',
                             }}>
-                            <Link href="/auth">Get started</Link>
+                            <Link href="/auth">Login / Signup</Link>
                         </Button>
                         <Box>
                             <Icon
@@ -76,12 +79,26 @@ export default function CallToActionWithAnnotation() {
                                 right={'-125px'}
                                 top={'-15px'}
                                 transform={'rotate(10deg)'}>
-                                Get started for free.
+                                Get started!
               </Text>
                         </Box>
                     </Stack>
                 </Stack>
             </Container>
+            <Container maxW="4xl" padding='3' centerContent>
+                <Stack spacing={8}>
+                    <Box id="work" display="flex" flexDir="column" textAlign="center">
+                        <Heading fontSize={{ base: "3xl", md: '4xl' }}>How does it work?</Heading>
+                        <Text mt={5} pb={5} fontSize={{ base: 16, md: 20 }} fontWeight={400} fontFamily="Inter">
+                            Cryptseed is made for storing seed phrases safely and securely inside your browser. With increasing popularity of dApps, I found myself in a place where it was hard storing seed phrases. I used to store them on my google drive but after reading an article where an attacker stole all funds of a person when his Google account was compromised.
+            <br />
+            Cryptseed uses AES salted encryption to secure the seed phrases inside the browser and it also uses Google OAuth to verify the user.
+            <br />
+                        </Text>
+                    </Box>
+                </Stack>
+            </Container>
+            <Footer />
         </>
     );
 }

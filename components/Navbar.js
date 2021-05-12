@@ -38,11 +38,12 @@ export default function WithSubnavigation() {
                 borderBottom={1}
                 borderStyle={'solid'}
                 borderColor={useColorModeValue('gray.200', 'gray.900')}
-                align={'center'}>
+                align={'center'}
+                textAlign={{ base: 'center', md: 'left' }}>
                 <Flex
                     flex={{ base: 1, md: 'auto' }}
                     ml={{ base: -2 }}
-                    display={{ base: 'flex', md: 'none' }}>
+                    display={{ base: 'none', md: 'none' }}>
                     <IconButton
                         onClick={onToggle}
                         icon={
@@ -54,10 +55,10 @@ export default function WithSubnavigation() {
                 </Flex>
                 <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
                     <Text
-                        textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
+                        textAlign={'center'}
                         fontFamily={'Inter'}
                         color={useColorModeValue('gray.800', 'white')}>
-                        <Link href="/">Cryptseed</Link>
+                        <Link href="/" fontWeight="bold">Cryptseed</Link>
                     </Text>
 
                     <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -220,9 +221,5 @@ const NAV_ITEMS = [
     {
         label: 'How does it work?',
         href: '#work'
-    },
-    {
-        label: 'Clone Project',
-        href: 'https://github.com/devdaksh'
     },
 ];
