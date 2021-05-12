@@ -89,7 +89,7 @@ export default function CallToActionWithAnnotation() {
                 <Stack spacing={8}>
                     <Box id="work" display="flex" flexDir="column" textAlign="center">
                         <Heading fontSize={{ base: "3xl", md: '4xl' }}>How does it work?</Heading>
-                        <Text mt={5} pb={5} fontSize={{ base: 16, md: 20 }} fontWeight={400} fontFamily="Inter">
+                        <Text mt={5} pb={5} color={'gray.500'} fontSize={{ base: 16, md: 20 }} fontWeight={400} fontFamily="Inter">
                             Cryptseed is made for storing seed phrases safely and securely inside your browser. With increasing popularity of dApps, I found myself in a place where it was hard storing seed phrases. I used to store them on my google drive but after reading an article where an attacker stole all funds of a person when his Google account was compromised.
             <br />
             Cryptseed uses AES salted encryption to secure the seed phrases inside the browser and it also uses Google OAuth to verify the user.
@@ -102,6 +102,7 @@ export default function CallToActionWithAnnotation() {
         </>
     );
 }
+
 
 const Arrow = createIcon({
     displayName: 'Arrow',
