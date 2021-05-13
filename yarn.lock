@@ -1137,6 +1137,11 @@
   "resolved" "https://registry.npmjs.org/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.4.1.tgz"
   "version" "0.4.1"
 
+"@fontsource/inter@^4.3.0":
+  "integrity" "sha512-qtUF+Fn9vH4O7V/13kOeemEJpQfhTMxtnOJzJw3kY7SOwl1cbs4fnd9QnQOczU3AVBJEPF1ik639uvaOg7g43A=="
+  "resolved" "https://registry.npmjs.org/@fontsource/inter/-/inter-4.3.0.tgz"
+  "version" "4.3.0"
+
 "@grpc/grpc-js@^1.0.0":
   "integrity" "sha512-fiL7ZaGg2HBiFtmv6m34d5jEgEtNXfctjzB3f7b3iuT7olBX4mHLMOqOBmGTTSOTfNRQJH5+vsyk6mEz3I0Q7Q=="
   "resolved" "https://registry.npmjs.org/@grpc/grpc-js/-/grpc-js-1.3.0.tgz"
