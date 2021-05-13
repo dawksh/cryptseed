@@ -43,7 +43,7 @@ export default function CallToActionWithAnnotation() {
                             securely
             </Text>
                     </Heading>
-                    <Text color={'gray.600'} fontSize={{ base: 'xl', md: 'md' }}>
+                    <Text color={'gray.600'} fontWeight={400} fontSize={{ base: 'xl', md: 'md' }}>
                         Tired of saving your seed phrases? Try Cryptseed ✨. Encrypt seed phrases with AES encryption and save them inside your browser. Signup now to register and get email when the product goes live!
           </Text>
                     <Stack
