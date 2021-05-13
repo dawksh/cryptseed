@@ -45,8 +45,8 @@ function create() {
             <Head><title>Add new seed | Cryptseed   </title></Head>
             <Flex justifyContent="center" height="100vh" alignItems="center" p={6}>
                 <Flex direction="column" justifyContent="space-between">
-                    <Input variant="filled" mb={6} size="md" type="text" value={service} onChange={e => setService(e.target.value)} placeholder="Type service name" />
-                    <Input variant="filled" mb={6} size="md" type="password" value={phrase} onChange={e => setPhrase(e.target.value)} placeholder="Paste Your Seed Phrase" />
+                    <Input variant="filled" isRequired={true} mb={6} size="md" type="text" value={service} onChange={e => setService(e.target.value)} placeholder="Type service name" />
+                    <Input variant="filled" isRequired={true} mb={6} size="md" type="password" value={phrase} onChange={e => setPhrase(e.target.value)} placeholder="Paste Your Seed Phrase" />
                     <Button variant="outline" type="submit" onClick={savePhrase}>Save Phrase</Button>
                 </Flex>
 
