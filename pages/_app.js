@@ -1,16 +1,17 @@
 import '../styles/globals.css'
 import { ChakraProvider, extendTheme } from "@chakra-ui/react"
-import "@fontsource/inter.css"
+import "@fontsource/inter/700.css"
 
 
 function MyApp({ Component, pageProps }) {
+  const theme = extendTheme({
+    fonts: {
+      heading: "Inter"
+    }
+  })
   return (
     <ChakraProvider
-      theme={extendTheme({
-        fonts: {
-          heading: "Inter"
-        }
-      })}
+      theme={theme}
     >
       <Component {...pageProps} />
     </ChakraProvider>
