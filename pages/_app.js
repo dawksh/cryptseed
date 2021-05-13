@@ -5,7 +5,13 @@ import { ChakraProvider } from "@chakra-ui/react"
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider>
+    <ChakraProvider
+      theme={extendTheme({
+        fonts: {
+          heading: "Inter"
+        }
+      })}
+    >
       <Component {...pageProps} />
     </ChakraProvider>
 
