@@ -16,6 +16,9 @@ import {
 } from '@chakra-ui/react';
 
 export default function CallToActionWithAnnotation() {
+
+    const phLink = `https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=295523&theme=${useColorModeValue('light', 'dark')}`
+
     return (
         <>
             <Head>
@@ -63,7 +66,7 @@ export default function CallToActionWithAnnotation() {
                             }}>
                             <Link href="/auth">Login / Signup</Link>
                         </Button>
-                        <a href="https://www.producthunt.com/posts/cryptseed?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-cryptseed" target="_blank"><img src={`https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=295523&theme=${useColorModeValue('dark', 'light')}`} alt="Cryptseed - Save your seed phrases securely. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+                        <a href="https://www.producthunt.com/posts/cryptseed?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-cryptseed" target="_blank"><img src={phLink} alt="Cryptseed - Save your seed phrases securely. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
                         <Box>
                             <Icon
                                 as={Arrow}
