@@ -1,34 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center"> Cryptseed </h1>
 
-## Getting Started
+**Description**:  Cryptseed is a open source tool aiming to help you save seed phrases inside your browser. I personally had become very skeptical so as how do I save my seed phrases. With increasing popularity of dApps and web 3.0, it is safe to assume that more products will be launched in the future which use this approach. Cryptseed encrypts your seed phrases and saves them inside your browser, at each decryption request, your identity is verified and then the phrases are decrypted.
 
-First, run the development server:
+  - **Technology stack**: This web app is built using ReactJS with NextJS as the framework.
+  - [Live Demo](https://cryptseed.ml)
 
-```bash
-npm run dev
-# or
-yarn dev
+
+**Screenshot**:
+
+![](https://ph-files.imgix.net/2bf8ee73-69df-45e7-9b49-35cd3e77bb7a.png?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=733&h=380&fit=max&dpr=1)
+
+
+## Dependencies
+
+Clone this repo 
+```
+git clone https://github.com/DevDaksh/cryptseed.git
+```
+After cloning, cd into it
+```
+cd cryptseed/
+```
+And at last use npm or yarn to install dependencies
+```
+npm install
+
+or
+
+yarn add
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Configuration
+Goto [Google Firebase Console](https://console.firebase.google.com) and add a new project and copy it's contents and paste them in respective fields inside ```.env.example``` file inside root directory. After you're done, remove ```.example``` from the name and you're set!
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Usage
+``npm run dev or yarn run dev`` to start the development server and start building!
