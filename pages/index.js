@@ -66,7 +66,6 @@ export default function CallToActionWithAnnotation() {
                             }}>
                             <Link href="/auth">Login / Signup</Link>
                         </Button>
-                        <Link href="https://www.producthunt.com/posts/cryptseed?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-cryptseed" target="_blank"><img src={phLink} alt="Cryptseed - Save your seed phrases securely. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></Link>
                         <Box>
                             <Icon
                                 as={Arrow}
