@@ -6,6 +6,8 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react';
 
+import Link from 'next/link'
+
 export default function SmallWithNavigation() {
     return (
         <Box
@@ -21,6 +23,8 @@ export default function SmallWithNavigation() {
                 alignItems="center"
             >
                 <Text fontWeight="bold" >© 2021 Cryptseed</Text>
+
+                <Text mt={5}>Made with <3 by <Link href="https://twitter.com/dawksh">Daksh</Link></Text>
             </Container>
         </Box>
     );

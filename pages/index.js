@@ -17,7 +17,7 @@ import {
 
 export default function CallToActionWithAnnotation() {
 
-    const phLink = `https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=295523&theme=${useColorModeValue('light', 'dark')}`
+    const phLink = `https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=295523&theme='light'`
 
     return (
         <>
