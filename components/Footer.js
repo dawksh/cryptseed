@@ -24,7 +24,7 @@ export default function SmallWithNavigation() {
             >
                 <Text fontWeight="bold" >© 2021 Cryptseed</Text>
 
-                <Text mt={5}>Made with <3 by <Link href="https://twitter.com/dawksh">Daksh</Link></Text>
+                <Text mt={5}>Made with by <Link href="https://twitter.com/dawksh">Daksh 🦄</Link></Text>
             </Container>
         </Box>
     );
