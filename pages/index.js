@@ -1,7 +1,7 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Head from "next/head";
+import Link from "next/link";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import {
     Box,
     Heading,
@@ -12,12 +12,11 @@ import {
     Icon,
     useColorModeValue,
     createIcon,
-    Feature
-} from '@chakra-ui/react';
+    Feature,
+} from "@chakra-ui/react";
 
 export default function CallToActionWithAnnotation() {
-
-    const phLink = `https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=295523&theme='light'`
+    const phLink = `https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=295523&theme='light'`;
 
     return (
         <>
@@ -26,77 +25,114 @@ export default function CallToActionWithAnnotation() {
                     href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
                     rel="stylesheet"
                 />
-                <title>Cryptseed | Your private seed phrase vault.</title>
+                <title>Cryptseed // Your private seed phrase vault.</title>
             </Head>
 
             <Navbar />
 
-            <Container maxW={'3xl'}>
+            <Container maxW={"3xl"}>
                 <Stack
                     as={Box}
-                    textAlign={'center'}
+                    textAlign={"center"}
                     spacing={{ base: 8, md: 14 }}
-                    py={{ base: 20, md: 36 }}>
+                    py={{ base: 20, md: 36 }}
+                >
                     <Heading
-                        fontWeight={'extrabold'}
-                        fontSize={{ base: '5xl', md: '6xl' }}
-                        lineHeight={'110%'}>
+                        fontWeight={"extrabold"}
+                        fontSize={{ base: "5xl", md: "6xl" }}
+                        lineHeight={"110%"}
+                    >
                         Save your seed phrases <br />
-                        <Text as={'span'} color={'green.400'}>
+                        <Text as={"span"} color={"green.400"}>
                             securely
-            </Text>
+                        </Text>
                     </Heading>
-                    <Text color={'gray.600'} fontWeight={400} fontSize={{ base: 14, md: 18 }}>
-                        Tired of saving your seed phrases? Try Cryptseed ✨. Encrypt seed phrases with AES encryption and save them inside your browser. Signup now to register and get email when the product goes live!
-          </Text>
+                    <Text
+                        color={"gray.600"}
+                        fontWeight={400}
+                        fontSize={{ base: 14, md: 18 }}
+                    >
+                        Tired of saving your seed phrases? Try Cryptseed ✨.
+                        Encrypt seed phrases with AES encryption and save them
+                        inside your browser. Signup now to register and get
+                        email when the product goes live!
+                    </Text>
                     <Stack
-                        direction={'column'}
+                        direction={"column"}
                         spacing={3}
-                        align={'center'}
-                        alignSelf={'center'}
-                        position={'relative'}>
+                        align={"center"}
+                        alignSelf={"center"}
+                        position={"relative"}
+                    >
                         <Button
-                            colorScheme={'green'}
-                            bg={'green.400'}
-                            rounded={'full'}
+                            colorScheme={"green"}
+                            bg={"green.400"}
+                            rounded={"full"}
                             px={7}
                             py={6}
                             _hover={{
-                                bg: 'green.500',
-                            }}>
+                                bg: "green.500",
+                            }}
+                        >
                             <Link href="/auth">Login / Signup</Link>
                         </Button>
                         <Box>
                             <Icon
                                 as={Arrow}
-                                color={useColorModeValue('gray.800', 'gray.300')}
+                                color={useColorModeValue(
+                                    "gray.800",
+                                    "gray.300"
+                                )}
                                 w={71}
-                                position={'absolute'}
+                                position={"absolute"}
                                 right={-71}
-                                top={'10px'}
+                                top={"10px"}
                             />
                             <Text
-                                fontSize={'lg'}
-                                fontFamily={'Caveat'}
-                                position={'absolute'}
-                                right={'-125px'}
-                                top={'-15px'}
-                                transform={'rotate(10deg)'}>
+                                fontSize={"lg"}
+                                fontFamily={"Caveat"}
+                                position={"absolute"}
+                                right={"-125px"}
+                                top={"-15px"}
+                                transform={"rotate(10deg)"}
+                            >
                                 Get started!
-              </Text>
+                            </Text>
                         </Box>
                     </Stack>
                 </Stack>
             </Container>
-            <Container maxW="4xl" padding='3' centerContent>
+            <Container maxW="4xl" padding="3" centerContent>
                 <Stack spacing={8}>
-                    <Box id="work" display="flex" flexDir="column" textAlign="center">
-                        <Heading fontSize={{ base: "3xl", md: '4xl' }}>How does it work?</Heading>
-                        <Text mt={5} pb={5} color={'gray.500'} fontSize={{ base: 16, md: 20 }} fontWeight={400} fontFamily="Inter">
-                            Cryptseed is made for storing seed phrases safely and securely inside your browser. With increasing popularity of dApps, I found myself in a place where it was hard storing seed phrases. I used to store them on my google drive but after reading an article where an attacker stole all funds of a person when his Google account was compromised.
-            <br />
-            Cryptseed uses AES salted encryption to secure the seed phrases inside the browser and it also uses Google OAuth to verify the user.
-            <br />
+                    <Box
+                        id="work"
+                        display="flex"
+                        flexDir="column"
+                        textAlign="center"
+                    >
+                        <Heading fontSize={{ base: "3xl", md: "4xl" }}>
+                            How does it work?
+                        </Heading>
+                        <Text
+                            mt={5}
+                            pb={5}
+                            color={"gray.500"}
+                            fontSize={{ base: 16, md: 20 }}
+                            fontWeight={400}
+                            fontFamily="Inter"
+                        >
+                            Cryptseed is made for storing seed phrases safely
+                            and securely inside your browser. With increasing
+                            popularity of dApps, I found myself in a place where
+                            it was hard storing seed phrases. I used to store
+                            them on my google drive but after reading an article
+                            where an attacker stole all funds of a person when
+                            his Google account was compromised.
+                            <br />
+                            Cryptseed uses AES salted encryption to secure the
+                            seed phrases inside the browser and it also uses
+                            Google OAuth to verify the user.
+                            <br />
                         </Text>
                     </Box>
                 </Stack>
@@ -106,10 +142,9 @@ export default function CallToActionWithAnnotation() {
     );
 }
 
-
 const Arrow = createIcon({
-    displayName: 'Arrow',
-    viewBox: '0 0 72 24',
+    displayName: "Arrow",
+    viewBox: "0 0 72 24",
     path: (
         <path
             fillRule="evenodd"
